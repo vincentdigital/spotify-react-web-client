@@ -6,7 +6,6 @@ export default {
     let scopes = [
       'streaming',
       'user-read-private',
-      'user-read-birthdate',
       'user-read-email',
       'user-read-recently-played',
       'user-read-playback-state',
