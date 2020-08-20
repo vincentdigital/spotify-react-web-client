@@ -23,6 +23,7 @@ type Query {
 }
 
 type SpotifyTrack {
+  duration: Int!
   id: Int!
   spotifyId: String!
   title: String!

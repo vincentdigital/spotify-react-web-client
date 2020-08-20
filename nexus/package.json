@@ -14,10 +14,12 @@
     "migrate:save": "npx prisma migrate save --experimental"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "nexus": "0.25.0",
     "nexus-plugin-prisma": "0.16.1"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.7",
     "@types/jest": "26.0.0",
     "jest": "26.0.1",
     "jest-environment-node": "26.0.1",

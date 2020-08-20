@@ -52,3 +52,6 @@ yarn-error.log*
 
 .vscode
 .nexus
+
+
+.tmp_build

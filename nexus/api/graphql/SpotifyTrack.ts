@@ -6,5 +6,6 @@ schema.objectType({
     t.model.id()
     t.model.spotifyId()
     t.model.title()
+    t.model.duration()
   }
 })

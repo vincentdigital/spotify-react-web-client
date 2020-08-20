@@ -13,6 +13,8 @@ import RightSection from './containers/rightSection/rightSection';
 
 import Login from './spotify/login';
 import WebPlaybackReact from './spotify/webPlayback';
+import { ApolloProvider } from '@apollo/client';
+import { gqlClient } from './gqlClient';
 
 window.onSpotifyWebPlaybackSDKReady = () => {};
 
@@ -52,15 +54,17 @@ class App extends Component {
     };
 
     return (
-      <div className="app">
-        <WebPlaybackReact {...webPlaybackSdkProps}>
-          <Spinner loading={!this.state.playerLoaded}>
-            <LeftSection />
-            <MainSection />
-            <RightSection />
-          </Spinner>
-        </WebPlaybackReact>
-      </div>
+      <ApolloProvider client={gqlClient}>
+        <div className="app">
+          <WebPlaybackReact {...webPlaybackSdkProps}>
+            <Spinner loading={!this.state.playerLoaded}>
+              <LeftSection />
+              <MainSection />
+              <RightSection />
+            </Spinner>
+          </WebPlaybackReact>
+        </div>
+      </ApolloProvider>
     );
   }
 }
