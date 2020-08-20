@@ -9,7 +9,9 @@
     "style": "prettier --write 'src/**/*'",
     "build": "npm -s run clean && nexus build",
     "dev": "nexus dev",
-    "data:seed": "ts-node prisma/seed.ts"
+    "data:seed": "ts-node prisma/seed.ts",
+    "migrate:up": "npx prisma migrate up --experimental",
+    "migrate:save": "npx prisma migrate save --experimental"
   },
   "dependencies": {
     "nexus": "0.25.0",

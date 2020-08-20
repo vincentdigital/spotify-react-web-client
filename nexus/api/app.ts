@@ -11,6 +11,7 @@ settings.change({
     },
   },
   server: {
+    port: 4001,
     startMessage: (info) => {
       settings.original.server.startMessage(info)
       log.warn('piggy back message!')
