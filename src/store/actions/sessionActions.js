@@ -2,7 +2,7 @@ import axios from '../../axios';
 
 export const setToken = token => {
   axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
-  localStorage.setItem('token', token);
+  sessionStorage.setItem('token', token);
   return {
     type: 'SET_TOKEN',
     token

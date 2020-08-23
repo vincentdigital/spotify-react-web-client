@@ -31,6 +31,9 @@ export default {
   },
 
   getToken: () => {
+    if (sessionStorage.getItem('token')) {
+      return sessionStorage.getItem('token');
+    }
     let hashParams = {};
     let e,
       r = /([^&;=]+)=?([^&;]*)/g,
